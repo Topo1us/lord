@@ -2,7 +2,7 @@ import socket
 import os
 import time
 os.system('clear')
-os.system('cd lord')
+#os.system('cd lord')
 os.system('echo 0>>block_1')
 print('''
 \033[32mдоступ к системе voron открыт.
@@ -43,14 +43,15 @@ i - обновление пакетов данных, повышение моб�
     def b_3():
         os.system('clear')
         os.system('cd')
-        os.system('cd lord')
-        block_1=open('block_1.txt','r')
-        block_1=block_1.read()
-        os.system('cd')
-        if 'impulse' in block_1:
-            c_1()
-        elif 'impulse' not in block_1:
-            c_1_2
+        os.system('ls)
+#        os.system('cd lord')
+#        block_1=open('block_1.txt','r')
+#        block_1=block_1.read()
+#        os.system('cd')
+#        if 'impulse' in block_1:
+#            c_1()
+#        elif 'impulse' not in block_1:
+#            c_1_2
     def b_5():
         os.system('clear')
         a_1()
