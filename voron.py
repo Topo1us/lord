@@ -2,6 +2,7 @@ import socket
 import os
 import time
 os.system('clear')
+os.system('echo 0>>block_1')
 print('''
 \033[32mдоступ к системе voron открыт.
 ''')
