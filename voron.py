@@ -43,7 +43,7 @@ i - обновление пакетов данных, повышение моб�
     def b_3():
         os.system('clear')
         os.system('cd')
-        os.system('ls)
+        os.system('ls')
 #        os.system('cd lord')
 #        block_1=open('block_1.txt','r')
 #        block_1=block_1.read()
